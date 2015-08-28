@@ -231,27 +231,27 @@
         return str;
     };
 
-    var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi"
-    var botCreatorIDs = ["3851534", "4105209"];
+    var botCreator = "Samuel (MCCoder)";
+    var botMaintainer = "MineplexDev"
+    var botCreatorIDs = ["6068715", "11427002"];
 
     var basicBot = {
-        version: "2.8.13",
+        version: "1.0.0 Alpha",
         status: false,
-        name: "basicBot",
+        name: "MCCoder's Death Machine",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        scriptLink: "https://rawgit.com/KaosBass/basicBot/master/basicBot.js",
+        cmdLink: "https://goo.gl/MIO6SG",
+        chatLink: "https://rawgit.com/KaosBass/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "MCCoder's Death Machine",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-            scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+            chatLink: "https://rawgit.com/KaosBass/basicBot/master/lang/en.json",
+            scriptLink: "https://rawgit.com/KaosBass/basicBot/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -282,11 +282,12 @@
             skipReasons: [
                 ["theme", "This song does not fit the room theme. "],
                 ["op", "This song is on the OP list. "],
+                ["meh", "This song received to many mehs. "],
                 ["history", "This song is in the history. "],
                 ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["error", "The song you played was not available for some users. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -307,9 +308,9 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/BANNEDlist.json"
+                NSFW: "https://rawgit.com/KaosBass/basicBot-customization/master/blacklists/NSFWlist.json",
+                OP: "https://rawgit.com/KaosBass/basicBot-customization/master/blacklists/OPlist.json",
+                BANNED: "https://rawgit.com/KaosBass/basicBot-customization/master/blacklists/BANNEDlist.json"
             }
         },
         room: {
