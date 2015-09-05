@@ -241,7 +241,7 @@
         name: "MCCoder's Death Machine",
         loggedInID: null,
         scriptLink: "https://rawgit.com/KaosBass/basicBot/master/basicBot.js",
-        cmdLink: "https://goo.gl/MIO6SG",
+        cmdLink: "https://goo.gl/chF8cE",
         chatLink: "https://rawgit.com/KaosBass/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
@@ -306,7 +306,7 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
-            commandLiteral: "!",
+            commandLiteral: "~",
             blacklists: {
                 NSFW: "https://rawgit.com/KaosBass/basicBot-customization/master/blacklists/NSFWlist.json",
                 OP: "https://rawgit.com/KaosBass/basicBot-customization/master/blacklists/OPlist.json",
@@ -1186,7 +1186,7 @@
                     API.sendChat(subChat(basicBot.chat.adfly, {name: chat.un}));
                     return true;
                 }
-                if (msg.indexOf('autojoin was not enabled') > 0 || msg.indexOf('AFK message was not enabled') > 0 || msg.indexOf('!afkdisable') > 0 || msg.indexOf('!joindisable') > 0 || msg.indexOf('autojoin disabled') > 0 || msg.indexOf('AFK message disabled') > 0) {
+                if (msg.indexOf('autojoin was not enabled') > 0 || msg.indexOf('AFK message was not enabled') > 0 || msg.indexOf('~afkdisable') > 0 || msg.indexOf('~joindisable') > 0 || msg.indexOf('autojoin disabled') > 0 || msg.indexOf('AFK message disabled') > 0) {
                     API.moderateDeleteChat(chat.cid);
                     return true;
                 }
