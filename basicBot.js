@@ -1,10 +1,3 @@
-/**
- *Copyright 2014 Yemasthui
- *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
- *This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
- */
-
-
 (function () {
 
     /*window.onerror = function() {
@@ -30,9 +23,6 @@
         clearInterval(basicBot.room.afkInterval);
         basicBot.status = false;
     };
-
-    // This socket server is used solely for statistical and troubleshooting purposes.
-    // This server may not always be up, but will be used to get live data at any given time.
 
     var socket = function () {
         function loadSocket() {
@@ -99,7 +89,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/KaosBass/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -256,38 +246,41 @@
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
-            autowoot: true,
+            autowoot: false,
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 60,
-            bouncerPlus: true,
+            bouncerPlus: false,
             blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
+            voteSkip: true,
             voteSkipLimit: 10,
-            historySkip: false,
+            historySkip: true,
             timeGuard: true,
-            maximumSongLength: 10,
+            maximumSongLength: 6,
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "This song does not fit the room theme. "],
+                ["nsfw", "The song you contained was NSFW (image or sound). "],
+                ["troll", "The song you played was a troll song. "],
+                ["theme", "This song is not EDM themed. "],
+                ["length", "Your song went for longer than 6 minutes. "],
                 ["op", "This song is on the OP list. "],
                 ["meh", "This song received to many mehs. "],
                 ["history", "This song is in the history. "],
                 ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["error", "The song you played was not available for some users. "]
+                ["error", "The song you played was not available for some users. "],
+                ["outro", "This song has an outro. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -296,7 +289,7 @@
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: null,
             rulesLink: null,
             themeLink: null,
@@ -1289,7 +1282,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'sex', 'asshole', 'horny', 'rectum', 'ass', 'whore', 'fucking', 'cock', 'dafuq', 'fuck', 'vagina', 'penis', 'fckk', 'dick', 'a$$', 'rape', 'pussy', 'dafaq', 'slut', 'feck', 'cunt', 'nigger', 'fag', 'homo', 'nigga', 'bastard', 'faggot', 'fukk', 'bitch', 'fack', 'shit', 'wanker', 'masterbate', 'jizz'
             ]
         },
         connectAPI: function () {
